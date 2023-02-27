@@ -1,8 +1,11 @@
-- name: My first play
-  hosts: all
+- name: My sample CI/CD playbook
+  hosts: ci-runner-1, ci-runner-2
   tasks:
-   - name: Ping my hosts
+   - name: build project
      ansible.builtin.ping:
-   - name: Print message
+   - name: check lint
      ansible.builtin.debug:
        msg: Hello world
+   - name: run test
+     ansible.builtin.debug:
+       msg: Hello worldans

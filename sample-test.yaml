@@ -2,10 +2,8 @@
   hosts: ci-runner-1, ci-runner-2
   tasks:
    - name: build project
-     ansible.builtin.ping:
+     ansible.builtin.command: npm ci --ignore-scripts
    - name: check lint
-     ansible.builtin.debug:
-       msg: Hello world
+     ansible.builtin.command: npm run lint
    - name: run test
-     ansible.builtin.debug:
-       msg: Hello worldans
+     ansible.builtin.command: npm test

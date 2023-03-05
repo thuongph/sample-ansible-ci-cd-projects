@@ -1,5 +1,5 @@
 - name: My sample CI/CD playbook
-  hosts: ci-runner-1, ci-runner-2
+  hosts: 192.168.56.8
   tasks:
    - name: build project
      ansible.builtin.command: npm ci --ignore-scripts
